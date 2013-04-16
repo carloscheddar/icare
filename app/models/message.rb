@@ -1,7 +1,7 @@
 class Message
   include Mongoid::Document
   include Mongoid::Timestamps
-  include Mongoid::Paranoia
+  #include Mongoid::Paranoia
 
   belongs_to :sender, class_name: User.model_name
 

@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
 ruby '2.0.0'
-gem 'rails', '3.2.13'
+gem 'rails', '4.0.0.beta1'
+gem 'rails-observers'
 
 # Servers
 gem 'thin'
@@ -17,11 +18,10 @@ gem 'rabl'
 gem 'client_side_validations'
 gem 'client_side_validations-turbolinks'
 gem 'kaminari'
-gem 'mongoid'
-gem 'mongoid_geospatial'
+gem 'mongoid', git: 'git://github.com/mongoid/mongoid.git'
+gem 'mongoid_geospatial', git: 'git://github.com/nofxx/mongoid_geospatial.git'
 gem 'mongoid_slug'
 gem 'validates_timeliness'
-gem 'strong_parameters'
 
 # Geospatial data library
 gem 'rgeo'
@@ -54,7 +54,6 @@ group :development, :test do
   gem 'faker'
   gem 'pry'
   gem 'pry-rails'
-  gem 'rspec-rails', '~> 2.6'
 end
 
 group :development do
@@ -71,24 +70,23 @@ group :test do
   gem 'email_spec'
   gem 'launchy'
   gem 'mongoid-rspec'
+  gem 'rspec-rails'
   gem 'selenium-webdriver'
   gem 'simplecov', require: false
-  gem 'spork', '~> 1.0rc'
   gem 'webmock', require: false
 end
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'coffee-rails'
+# Assets
+group :development do
+  gem 'coffee-rails', '~> 4.0.0.beta1'
   gem 'compass-rails'
   gem 'haml_assets'
   gem 'handlebars_assets'
   gem 'i18n-js'
   gem 'jquery-turbolinks'
   gem 'less-rails'
-  gem 'sass-rails'
-  gem 'therubyracer', '0.10.2' # NOTE can't update due to libv8 version on heroku
+  gem 'sass-rails', '~> 4.0.0.beta1'
+  gem 'therubyracer'
   gem 'turbolinks'
   gem 'twitter-bootstrap-rails'
   gem 'uglifier'

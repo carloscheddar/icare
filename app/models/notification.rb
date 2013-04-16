@@ -1,7 +1,7 @@
 class Notification
   include Mongoid::Document
   include Mongoid::Timestamps
-  include Mongoid::Paranoia
+  #include Mongoid::Paranoia
 
   embedded_in :user
 

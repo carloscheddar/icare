@@ -1,7 +1,7 @@
 class Conversation
   include Mongoid::Document
   include Mongoid::Timestamps
-  include Mongoid::Paranoia
+  #include Mongoid::Paranoia
 
   embeds_many :messages, cascade_callbacks: true
 

@@ -1,7 +1,7 @@
 class References::Base
   include Mongoid::Document
   include Mongoid::Timestamps
-  include Mongoid::Paranoia
+  #include Mongoid::Paranoia
 
   field :body
   field :rating, type: Integer

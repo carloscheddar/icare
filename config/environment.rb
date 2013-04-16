@@ -1,7 +1,7 @@
-# Load the rails application
+# Load the rails application.
 require File.expand_path('../application', __FILE__)
 
-require File.join(Rails.root.to_s, "config", "configuration.rb")
+require File.join(Rails.root.to_s, 'config', 'configuration.rb')
 
 # Initialize the rails application
 Icare::Application.initialize!
