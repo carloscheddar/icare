@@ -3,7 +3,6 @@ class Itinerary
   include Mongoid::Timestamps
   #include Mongoid::Paranoia
   include Mongoid::Geospatial
-  include Mongoid::MultiParameterAttributes
   include Mongoid::Slug
 
   DAYNAME = %w(Sunday Monday Tuesday Wednesday Thursday Friday Saturday)
@@ -62,6 +61,13 @@ class Itinerary
   validate :inside_bounds, if: -> { APP_CONFIG.itineraries.geo_restricted }, on: :create
   validate :driver_is_female, if: -> { pink }
   validate :return_date_validator, if: -> { round_trip }
+
+  set_callback(:create, :after) do
+    begin
+      Resque.enqueue(FacebookTimelinePublisher, id) if share_on_facebook_timeline
+    rescue Redis::CannotConnectError
+    end
+  end
 
   def return_date_validator
     self.errors.add(:return_date,

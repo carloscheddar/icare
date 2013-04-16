@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 ruby '2.0.0'
 gem 'rails', '4.0.0.beta1'
-gem 'rails-observers'
 
 # Servers
 gem 'thin'
@@ -15,7 +14,7 @@ gem 'simpleconfig'
 gem 'rabl'
 
 # ODM and related
-gem 'client_side_validations'
+gem 'client_side_validations', git: 'git://github.com/bcardarella/client_side_validations.git', branch: '4-0-beta'
 gem 'client_side_validations-turbolinks'
 gem 'kaminari'
 gem 'mongoid', git: 'git://github.com/mongoid/mongoid.git'
@@ -76,8 +75,7 @@ group :test do
   gem 'webmock', require: false
 end
 
-# Assets
-group :development do
+group :assets do
   gem 'coffee-rails', '~> 4.0.0.beta1'
   gem 'compass-rails'
   gem 'haml_assets'

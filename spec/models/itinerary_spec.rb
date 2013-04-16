@@ -8,6 +8,10 @@ describe Itinerary do
   let(:male_user) { FactoryGirl.create :user, gender: 'male' }
   let(:female_user) { FactoryGirl.create :user, gender: 'female' }
 
+  it "asynchronously publishes on facebook timeline if requested by user" do
+    expect(-> { FactoryGirl.create :itinerary, share_on_facebook_timeline: true }).to_not raise_error Exception
+  end
+
   describe 'return_date_validator' do
     let(:invalid_itinerary) { FactoryGirl.build :itinerary, leave_date: Time.now + 1.day, return_date: Time.now - 1.day, round_trip: true }
 
