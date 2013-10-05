@@ -244,9 +244,9 @@ en-US:
       user_profile_details: Profile details are updated from Facebook after each login.
       vehicle_avg_consumption_help: Use a point to separate decimals. This value is used in the fuel cost estimate when creating a new itinerary.
       vehicle_avg_consumption_note: "Note: Write in this field the %{fuel} value of %{proportional_costs} table"
-      fuel: Carburante
-      proportional_costs: "COSTI PROPORZIONALI €/km"
-      km_costs_calculation_link: Calculate the kilometrical cost of your vehicle on the ACI website (Italian)
+      fuel: fuel
+      proportional_costs: "Proportional Cost $/m"
+      km_costs_calculation_link: Calculate the mile cost of your vehicle on the ACI website (Italian)
       send_email: Send an email when
       send_email_at_address: "We will send emails at the following address: %{email}"
       application_settings: Application settings
@@ -308,7 +308,7 @@ en-US:
       leave_time: Leave time
       return_time: Return time
       edit_all_times: Edit all times
-      fuel_help_text: "The route is {km} km long. Considering an average consumption of %{avg_consumption} €/km, the estimate cost is {est}.00 €."
+      fuel_help_text: "The route is {m} m long. Considering an average consumption of %{avg_consumption} $/m, the estimate cost is {est}.00 €."
       more_accurate_data: "Need more accurate data for your vehicle?"
       pink_help: Pink itineraries can be created only by women and are visible only to women.
 
