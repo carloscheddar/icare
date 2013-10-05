@@ -96,7 +96,7 @@ production:
   <<: *defaults
   sessions:
     default:
-      uri: <%= ENV['MONGOLAB_URI'] %>
+      uri: <%= URI.parse(ENV['MONGOLAB_URI'] || 'some_other_link') %>
       options:
         <<: *defaults_sessions_default_options
   options:
