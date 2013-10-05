@@ -6,7 +6,7 @@
 
 SimpleConfig.for :application do
   set :app_name, 'Ride Surfing'
-  set :repository_url, 'http://github.com/diowa/icare'
+  set :repository_url, 'http://github.com/carloscheddar/icare'
 
   set :available_locales, Hash[{ :"en-US" => 'English (US)',
                                  :"it-IT" => 'Italiano' }.sort_by { |_, native_name| native_name }]
