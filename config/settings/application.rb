@@ -40,7 +40,7 @@ SimpleConfig.for :application do
   end
 
   group :map do
-    # defaults to Italy
+     #defaults to Italy
     set :center, '41.87194, 12.567379999999957'
     set :zoom, 8
     group :bounds do

@@ -25,7 +25,7 @@
           .input-append
             = text_field_tag :fuel_price, nil, class: "input-mini text-right"
             %span.add-on>
-              &euro;
+              &dollar;
               = t(".per_liter")
           %p.help-block
             Prezzi medi al 16/07/2012: Benzina: 1,758 - Diesel: 1,649 - GPL: 0,741 - Metano: 0,972
@@ -34,7 +34,7 @@
           %h3
             #{t(".fuel_cost_estimate")}:
             %span#fuel-cost
-            %span &euro; / km
+            %span &dollar; / km
   .modal-footer
     = link_to t("save"), "#", data: { dismiss: "modal" }, id: "save-fuel-cost", class: "btn btn-primary"
     = link_to t("close"), "#", data: { dismiss: "modal" }, class: "btn"
