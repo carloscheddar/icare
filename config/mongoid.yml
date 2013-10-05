@@ -86,7 +86,7 @@ staging:
   <<: *defaults
   sessions:
     default:
-      uri: <%= ENV['MONGOHQ_URL'] %>
+      uri: <%= ENV['MONGOLAB_URI'] %>
       options:
         <<: *defaults_sessions_default_options
   options:
@@ -96,7 +96,7 @@ production:
   <<: *defaults
   sessions:
     default:
-      uri: <%= ENV['MONGOHQ_URL'] %>
+      uri: <%= ENV['MONGOLAB_URI'] %>
       options:
         <<: *defaults_sessions_default_options
   options:
