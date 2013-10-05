@@ -16,7 +16,7 @@
           .input-append
             = f.default_tag :text_field, :vehicle_avg_consumption, class: 'input-mini text-right'
             %span.add-on>
-              &dollar; / km
+              &dollar; / m
           - if @user.errors.include?(:vehicle_avg_consumption)
             %span.help-inline
               = @user.errors.messages[:vehicle_avg_consumption].join(', ')

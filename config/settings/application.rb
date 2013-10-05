@@ -16,7 +16,7 @@ SimpleConfig.for :application do
   set :secret_token, '197241fc4c041de6402aa732e0004c5401536237a1c39178005ddf9994695cfc71fb32b543f8fb216f272b416974e3ea3cece241278a40a8516291aec598a948'
   set :single_process_mode, true
 
-  set :costs_calculation_service_link, 'http://servizi.aci.it/CKInternet/'
+  set :costs_calculation_service_link, 'http://gasbuddy.com/'
 
   set :google_analytics_id, nil
   set :google_maps_api_key, nil
@@ -40,12 +40,12 @@ SimpleConfig.for :application do
   end
 
   group :map do
-     #defaults to Italy
-    set :center, '41.87194, 12.567379999999957'
+    # defaults to Italy
+    set :center, '18.217612,-66.472993'
     set :zoom, 8
     group :bounds do
-      set :sw, '35.49292010, 6.62672010'
-      set :ne, '47.0920, 18.52050150'
+      set :sw, '17.918636,-67.295594'
+      set :ne, '18.467886,-65.557008'
     end
   end
 
