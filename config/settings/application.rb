@@ -18,7 +18,7 @@ SimpleConfig.for :application do
 
   set :costs_calculation_service_link, 'http://gasbuddy.com/'
 
-  set :google_analytics_id, nil
+  set :google_analytics_id, 'GOOGLE_ANALYTICS_ID'
   set :google_maps_api_key, nil
 
   group :facebook do
