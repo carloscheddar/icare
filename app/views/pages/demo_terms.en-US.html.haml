@@ -2,7 +2,7 @@
 .row
   .span12
     %h1= yield :title
-    %h5.muted= t('last_modified', date: l(Date.parse('2012-12-01'), format: :long))
+    %h5.muted= t('last_modified', date: l(Date.parse('2013-10-06'), format: :long))
 
     %h3 Welcome to #{APP_CONFIG.app_name}
     %p
@@ -11,7 +11,7 @@
       platform #{APP_CONFIG.app_name}.
     %p
       The source code is available at
-      = link_to 'http://github.com/diowa/icare', APP_CONFIG.repository_url
+      = link_to 'http://github.com/carloscheddar/icare', APP_CONFIG.repository_url
 
     %h3 Our Warranties and Disclaimers
     %p
